@@ -22,7 +22,7 @@ export default function ExperienceTimeline() {
 				</motion.h2>
 
 				{/* Center vertical line */}
-				<div className="absolute top-0 left-1/2 -translate-x-1/2 h-full w-1 bg-green-400 rounded"></div>
+				<div className="absolute top-0 left-1/2 -translate-x-1/2 h-full w-[3px] bg-green-400 rounded" />
 
 				{/* Timeline items */}
 				<div className="space-y-16">
@@ -35,9 +35,7 @@ export default function ExperienceTimeline() {
 								whileInView={{ opacity: 1, y: 0 }}
 								viewport={{ once: true }}
 								transition={{ delay: index * 0.2 }}
-								className={`relative flex items-center min-h-[80px] ${
-									isLeft ? 'justify-start' : 'justify-end'
-								}`}
+								className="relative flex items-center min-h-[80px]"
 							>
 								{/* Dot */}
 								<motion.div
@@ -48,8 +46,10 @@ export default function ExperienceTimeline() {
 
 								{/* Content */}
 								<div
-									className={`max-w-[300px] px-4 ${
-										isLeft ? 'text-right mr-12' : 'text-left ml-12'
+									className={`max-w-[280px] px-6 ${
+										isLeft
+											? 'mr-auto text-right pr-12'
+											: 'ml-auto text-left pl-12'
 									}`}
 								>
 									<p className="text-sm text-gray-500">{item.year}</p>

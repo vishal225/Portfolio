@@ -58,12 +58,12 @@ export default function HorizontalTimeline() {
                   </p>
                   {item.type === 'education' ? (
                     <>
-                      <p className="text-base font-semibold text-gray-300">{item.degree}</p>
+                      <p className="font-semibold  text-green-400">{item.degree}</p>
                       <p className="text-sm text-gray-400">{item.school}</p>
                     </>
                   ) : (
                     <>
-                      <p className="text-base font-semibold text-gray-300">{item.role}</p>
+                      <p className="font-semibold text-green-400">{item.role}</p>
                       <p className="text-sm text-gray-400">{item.company}</p>
                     </>
                   )}

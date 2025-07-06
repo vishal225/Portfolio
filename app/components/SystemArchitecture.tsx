@@ -7,32 +7,32 @@ export default function SystemArchitecture() {
 		<section className="py-20 px-4">
 			<div className="max-w-6xl mx-auto">
 				<motion.h2 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-3xl font-bold mb-12 text-center">
-					System Architecture & Projects
+					Data Engineering Highlights
 				</motion.h2>
 
 				<div className="grid grid-cols-1 gap-8">
 					{[
 						{
-							title: 'Scalable Microservices Architecture',
-							description: 'Designed and implemented a microservices architecture handling 1M+ daily requests with 99.99% uptime',
+							title: 'Real-Time Data Ingestion Platform',
+							description: 'Designed scalable ingestion pipelines on AWS handling 15GB/day across 15+ data sources',
 							details: [
-								'Containerized microservices with Docker and Kubernetes',
-								'Implemented service mesh with Istio',
-								'Designed event-driven architecture using Apache Kafka',
-								'Achieved 40% reduction in response times',
+								'Developed modular, production-grade pipelines with PySpark & AWS Glue',
+								'Reduced compute cost by 13% through workflow optimization',
+								'Improved data SLAs by 30% with schema validation & retry mechanisms',
+								'Enabled external data sharing via Snowflake secure views',
 							],
-							tech: ['Kubernetes', 'Docker', 'Istio', 'Kafka', 'MongoDB', 'Redis'],
+							tech: ['AWS Glue', 'AWS Kinesis', 'S3', 'PySpark', 'Snowflake', 'AWS IAM', 'AWS Lakeformation'],
 						},
 						{
-							title: 'Real-time Data Processing Pipeline',
-							description: 'Built a robust data processing pipeline handling 5TB+ daily data with sub-second latency',
+							title: 'Automated Analytics with dbt & Airflow',
+							description: 'Built ETL workflows transforming 10TB+ data/month into actionable models using dbt',
 							details: [
-								'Implemented stream processing with Apache Flink',
-								'Designed fault-tolerant architecture with automatic failover',
-								'Optimized data throughput by 60%',
-								'Implemented comprehensive monitoring with Prometheus & Grafana',
+								'Developed incremental dbt models for key business metrics',
+								'Integrated with Apache Airflow to automate multi-stage DAGs',
+								'Boosted processing speed by 40% and reduced manual ops by 80%',
+								'Implemented observability framework for monitoring data freshness',
 							],
-							tech: ['Apache Flink', 'AWS Kinesis', 'Prometheus', 'Grafana', 'Python', 'PostgreSQL'],
+							tech: ['dbt', 'Apache Airflow', 'Snowflake', 'SQL', 'Python'],
 						},
 					].map((project, index) => (
 						<motion.div

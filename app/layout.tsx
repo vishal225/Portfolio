@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
+import { Analytics } from "@vercel/analytics/next"
 
 const geistSans = Geist({
 	variable: '--font-geist-sans',
@@ -13,39 +14,43 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-	title: '[Your Name] - Backend Developer',
+	title: 'Vishal Rajak - Data Engineer Portfolio',
 	description:
-		'Welcome to my portfolio! I am a passionate backend developer specializing in building scalable server architectures, robust APIs, and high-performance distributed systems. With expertise in cloud infrastructure and database optimization, I create efficient and reliable backend solutions.',
+		'Welcome to my portfolio! I am a data engineer and analytics developer with a passion for building scalable data pipelines, designing efficient data architectures, and delivering actionable insights. With expertise in cloud platforms, big data tools, and modern analytics frameworks, I enable data-driven decision-making through high-performance, reliable, and maintainable data solutions',
 	keywords: [
-		'Backend Developer',
-		'Software Engineer',
-		'System Architecture',
-		'API Development',
-		'Database Design',
-		'Cloud Computing',
-		'Microservices',
-		'DevOps',
-		'[Your Name]',
-		'Node.js',
-		'Python',
-		'Java',
-		'Distributed Systems',
-		'System Design',
-		'Backend Architecture',
+	'Data Engineer',
+	'Analytics Developer',
+	'ETL Pipelines',
+	'Data Architecture',
+	'Data Warehousing',
+	'Cloud Computing',
+	'Snowflake',
+	'AWS',
+	'Apache Spark',
+	'Airflow',
+	'dbt',
+	'SQL',
+	'Python',
+	'Big Data',
+	'Data Lake',
+	'Vishal Rajak',
+	'Data Modeling',
+	'Streaming Data',
+	'Data Engineering Projects',
 	],
-	authors: [{ name: '[Your Name]' }],
-	creator: '[Your Name]',
+	authors: [{ name: 'Vishal Rajak' }],
+	creator: 'Vishal Rajak',
 	openGraph: {
-		title: '[Your Name] - Backend Developer Portfolio',
+		title: 'Vishal Rajak - Data Engineer Portfolio',
 		description: 'Passionate backend developer crafting scalable and efficient server architectures. Explore my projects and technical expertise.',
 		url: 'https://your-domain.com',
-		siteName: '[Your Name] - Portfolio',
+		siteName: 'Vishal Rajak - Portfolio',
 		images: [
 			{
 				url: '/og-image.jpg',
 				width: 1200,
 				height: 630,
-				alt: '[Your Name] - Backend Developer Portfolio',
+				alt: 'Vishal Rajak -  Data Engineer Portfolio',
 			},
 		],
 		locale: 'en_US',
@@ -53,7 +58,7 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: 'summary_large_image',
-		title: '[Your Name] - Backend Developer',
+		title: 'Vishal Rajak -  Data Engineer Portfolio',
 		description: 'Passionate backend developer crafting scalable and efficient server architectures. Explore my projects and technical expertise.',
 		creator: '@yourusername',
 		images: ['/og-image.jpg'],
@@ -78,7 +83,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
+			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}<Analytics /></body>
 		</html>
 	);
 }

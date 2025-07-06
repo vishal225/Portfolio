@@ -1,5 +1,5 @@
 {
-	"name": "backend-portfolio-template",
+	"name": "data-engineering-portfolio",
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
@@ -12,7 +12,8 @@
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0",
 		"next": "15.1.6",
-		"framer-motion": "^12.0.6"
+		"framer-motion": "^12.0.6",
+		"@vercel/analytics": "^1.5.0"
 	},
 	"devDependencies": {
 		"typescript": "^5",
@@ -24,5 +25,6 @@
 		"eslint": "^9",
 		"eslint-config-next": "15.1.6",
 		"@eslint/eslintrc": "^3"
+
 	}
 }

@@ -35,4 +35,16 @@ export default function ExperienceTimeline() {
 							<motion.div
 								className="absolute -left-3 top-1 w-2.5 h-2.5 bg-green-400 rounded-full shadow-md"
 								animate={{ scale: [1, 1.6, 1], opacity: [1, 0.5, 1] }}
-								transiti
+								transition={{ repeat: Infinity, duration: 1.6, ease: 'easeInOut' }}
+							/>
+
+							<p className="text-sm text-gray-400">{item.year}</p>
+							<p className="text-base font-semibold text-white">{item.role}</p>
+							<p className="text-sm text-gray-300">{item.company}</p>
+						</motion.div>
+					))}
+				</div>
+			</div>
+		</section>
+	);
+}

@@ -39,21 +39,19 @@ export default function HorizontalTimeline() {
   return (
     <section className="py-12 px-4">
       <h2 className="text-3xl font-bold text-center mb-10">Timeline</h2>
-
       <div className="overflow-x-auto">
-        <div className="flex items-center relative w-max mx-auto px-4">
+        <div className="relative flex items-start w-max mx-auto px-4">
+          {/* Timeline line */}
+          <div className="absolute top-6 left-0 w-full h-1 bg-green-400" />
+
+          {/* Items */}
           {timeline.map((item, index) => (
-            <div key={index} className="relative flex flex-col items-center mx-8 min-w-[220px]">
-              {/* Connector Line */}
-              {index !== 0 && (
-                <div className="absolute -left-8 top-5 w-8 h-1 bg-green-400" />
-              )}
-
+            <div key={index} className="relative flex flex-col items-center text-center mx-8 min-w-[200px]">
               {/* Dot */}
-              <div className="w-4 h-4 bg-green-400 rounded-full z-10 border-2 border-white shadow-md" />
+              <div className="w-4 h-4 bg-green-500 rounded-full border-2 border-white z-10 mb-4" />
 
-              {/* Content Block */}
-              <div className={`absolute w-max ${index % 2 === 0 ? 'bottom-8' : 'top-8'} text-center`}>
+              {/* Card */}
+              <div className="bg-white shadow-md rounded-md p-4 border w-full">
                 <p className="text-sm text-gray-500">{item.start} – {item.end}</p>
                 {item.type === 'education' ? (
                   <>

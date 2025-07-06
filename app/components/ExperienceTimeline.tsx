@@ -1,66 +1,43 @@
 'use client';
 
-import { motion } from 'framer-motion';
-
 const timeline = [
-	{ year: '2022', company: 'Phreesia', role: 'Data Engineer III' },
-	{ year: '2021', company: 'SMATS Traffic Solutions Inc.', role: 'Software Developer' },
-	{ year: '2020', company: 'Meta Innovation Technologies', role: 'Data Engineer' },
+  { year: '2022', company: 'Phreesia', role: 'Data Engineer III' },
+  { year: '2021', company: 'SMATS Traffic Solutions Inc.', role: 'Software Developer' },
+  { year: '2020', company: 'Meta Innovation Technologies', role: 'Data Engineer' },
 ];
 
-export default function ExperienceTimeline() {
-	return (
-		<section className="py-16 px-4">
-			<div className="max-w-3xl mx-auto relative">
-				<motion.h2
-					initial={{ opacity: 0 }}
-					whileInView={{ opacity: 1 }}
-					viewport={{ once: true }}
-					className="text-3xl font-bold mb-12 text-center"
-				>
-					Work Experience
-				</motion.h2>
+export default function SimpleExperienceTimeline() {
+  return (
+    <section className="py-12 px-4">
+      <div className="max-w-3xl mx-auto relative">
+        <h2 className="text-3xl font-bold mb-10 text-center">Work Experience</h2>
 
-				{/* Center vertical line */}
-				<div className="absolute top-0 left-1/2 -translate-x-1/2 h-full w-[3px] bg-green-400 rounded" />
+        {/* Center vertical line */}
+        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 h-full w-1 bg-green-400" />
 
-				{/* Timeline items */}
-				<div className="space-y-16">
-					{timeline.map((item, index) => {
-						const isLeft = index % 2 === 0;
-						return (
-							<motion.div
-								key={index}
-								initial={{ opacity: 0, y: 30 }}
-								whileInView={{ opacity: 1, y: 0 }}
-								viewport={{ once: true }}
-								transition={{ delay: index * 0.2 }}
-								className="relative flex items-center min-h-[80px]"
-							>
-								{/* Dot */}
-								<motion.div
-									className="absolute left-1/2 -translate-x-1/2 w-3 h-3 bg-green-400 rounded-full shadow-md"
-									animate={{ scale: [1, 1.5, 1], opacity: [1, 0.6, 1] }}
-									transition={{ repeat: Infinity, duration: 1.6, ease: 'easeInOut' }}
-								/>
+        <div className="space-y-12">
+          {timeline.map((item, index) => {
+            const isLeft = index % 2 === 0;
+            return (
+              <div key={index} className="relative flex items-center min-h-[80px]">
+                {/* Dot */}
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-green-400 rounded-full border-2 border-white" />
 
-								{/* Content */}
-								<div
-									className={`max-w-[280px] px-6 ${
-										isLeft
-											? 'mr-auto text-right pr-12'
-											: 'ml-auto text-left pl-12'
-									}`}
-								>
-									<p className="text-sm text-gray-500">{item.year}</p>
-									<p className="text-base font-semibold text-gray-900 dark:text-white">{item.role}</p>
-									<p className="text-sm text-gray-700 dark:text-gray-300">{item.company}</p>
-								</div>
-							</motion.div>
-						);
-					})}
-				</div>
-			</div>
-		</section>
-	);
+                {/* Content */}
+                <div
+                  className={`max-w-xs px-4 ${
+                    isLeft ? 'mr-auto text-right pr-10' : 'ml-auto text-left pl-10'
+                  }`}
+                >
+                  <p className="text-sm text-gray-500">{item.year}</p>
+                  <p className="font-semibold text-gray-900">{item.role}</p>
+                  <p className="text-sm text-gray-700">{item.company}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
 }

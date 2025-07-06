@@ -36,37 +36,41 @@ const timeline = [
 ];
 
 export default function HorizontalTimeline() {
-  return (
-    <section className="py-12 px-4">
-      <h2 className="text-3xl font-bold text-center mb-10">Timeline</h2>
-      <div className="overflow-x-auto">
-        <div className="relative flex items-start w-max mx-auto px-4">
-          {/* Timeline line */}
-          <div className="absolute top-6 left-0 w-full h-1 bg-green-400" />
+ return (
+    <section className="py-20 px-4 bg-gray-900/50">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-3xl font-bold mb-12 text-center text-white">Experience Timeline</h2>
 
-          {/* Items */}
-          {timeline.map((item, index) => (
-            <div key={index} className="relative flex flex-col items-center text-center mx-8 min-w-[200px]">
-              {/* Dot */}
-              <div className="w-4 h-4 bg-green-500 rounded-full border-2 border-white z-10 mb-4" />
+        <div className="overflow-x-auto">
+          <div className="relative flex items-start w-max mx-auto px-4">
+            {/* Timeline line */}
+            <div className="absolute top-6 left-0 w-full h-1 bg-gray-600" />
 
-              {/* Card */}
-              <div className="bg-white shadow-md rounded-md p-4 border w-full">
-                <p className="text-sm text-gray-500">{item.start} – {item.end}</p>
-                {item.type === 'education' ? (
-                  <>
-                    <p className="font-semibold text-gray-900">{item.degree}</p>
-                    <p className="text-sm text-gray-600">{item.school}</p>
-                  </>
-                ) : (
-                  <>
-                    <p className="font-semibold text-gray-900">{item.role}</p>
-                    <p className="text-sm text-gray-600">{item.company}</p>
-                  </>
-                )}
+            {timeline.map((item, index) => (
+              <div key={index} className="relative flex flex-col items-center mx-6 min-w-[220px]">
+                {/* Dot */}
+                <div className="w-4 h-4 bg-gray-400 rounded-full border-2 border-white z-10 mb-4" />
+
+                {/* Block */}
+                <div className="bg-gray-800/50 border border-gray-700 rounded-lg p-5 text-center w-full">
+                  <p className="text-sm text-gray-400 mb-1">
+                    {item.start} – {item.end}
+                  </p>
+                  {item.type === 'education' ? (
+                    <>
+                      <p className="text-base font-semibold text-gray-300">{item.degree}</p>
+                      <p className="text-sm text-gray-400">{item.school}</p>
+                    </>
+                  ) : (
+                    <>
+                      <p className="text-base font-semibold text-gray-300">{item.role}</p>
+                      <p className="text-sm text-gray-400">{item.company}</p>
+                    </>
+                  )}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -45,7 +45,7 @@ export default function ContactSection() {
 							</motion.a>
 							<p className="text-green-500 mt-8 mb-2">$ cat resume.pdf</p>
 							<motion.a
-								href="/path-to-resume.pdf"
+								href="#"
 								target="_blank"
 								rel="noopener noreferrer"
 								whileHover={{ scale: 1.02 }}
@@ -59,7 +59,7 @@ export default function ContactSection() {
 							<p className="text-green-500 mt-8 mb-4">$ ls ./social-links</p>
 							<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 								<motion.a
-									href="#"
+									href="https://github.com/vishal225"
 									whileHover={{ scale: 1.05 }}
 									className="flex items-center gap-3 px-4 py-3 bg-gray-800/50 rounded-lg hover:bg-gray-700/50 transition-colors border border-gray-700/50 group"
 								>
@@ -74,7 +74,7 @@ export default function ContactSection() {
 									</div>
 								</motion.a>
 								<motion.a
-									href="#"
+									href="https://www.linkedin.com/in/vishalrajak/"
 									whileHover={{ scale: 1.05 }}
 									className="flex items-center gap-3 px-4 py-3 bg-gray-800/50 rounded-lg hover:bg-gray-700/50 transition-colors border border-gray-700/50 group"
 								>

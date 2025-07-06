@@ -6,14 +6,19 @@ export default function TechnicalMetrics() {
 	return (
 		<section className="py-20 px-4 bg-gray-900/50">
 			<div className="max-w-6xl mx-auto">
-				<motion.h2 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-3xl font-bold mb-12 text-center">
+				<motion.h2
+					initial={{ opacity: 0 }}
+					whileInView={{ opacity: 1 }}
+					viewport={{ once: true }}
+					className="text-3xl font-bold mb-12 text-center"
+				>
 					Impact & Achievements
 				</motion.h2>
 
 				<div className="grid grid-cols-1 gap-12">
-					{/* System Performance */}
+					{/* Pipeline Performance */}
 					<div>
-						<h3 className="text-xl font-semibold mb-6 text-green-400">System Performance</h3>
+						<h3 className="text-xl font-semibold mb-6 text-green-400">Data Pipeline Performance</h3>
 						<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 							<motion.div
 								initial={{ opacity: 0, scale: 0.95 }}
@@ -21,11 +26,11 @@ export default function TechnicalMetrics() {
 								viewport={{ once: true }}
 								className="bg-gray-800/50 rounded-lg p-6 border border-gray-700"
 							>
-								<h4 className="text-lg font-semibold text-gray-300">API Gateway</h4>
+								<h4 className="text-lg font-semibold text-gray-300">Streaming & Batch Pipelines</h4>
 								<ul className="mt-2 space-y-2 text-gray-400">
-									<li>• P95 latency reduced from 250ms to 80ms</li>
-									<li>• 99.99% availability achieved</li>
-									<li>• Handles 2M requests/day</li>
+									<li>• Built 15+ pipelines processing ~15GB/day each</li>
+									<li>• Improved SLA adherence by 30%</li>
+									<li>• Cut compute cost by 13% with Spark tuning</li>
 								</ul>
 							</motion.div>
 							<motion.div
@@ -34,19 +39,19 @@ export default function TechnicalMetrics() {
 								viewport={{ once: true }}
 								className="bg-gray-800/50 rounded-lg p-6 border border-gray-700"
 							>
-								<h4 className="text-lg font-semibold text-gray-300">Database Optimization</h4>
+								<h4 className="text-lg font-semibold text-gray-300">dbt + Snowflake Modeling</h4>
 								<ul className="mt-2 space-y-2 text-gray-400">
-									<li>• Query response time improved by 70%</li>
-									<li>• Implemented efficient indexing strategy</li>
-									<li>• Reduced DB load by 45%</li>
+									<li>• Transformed 10TB+/month using incremental dbt models</li>
+									<li>• Reduced processing time by 40%</li>
+									<li>• Created 100+ reusable metrics across teams</li>
 								</ul>
 							</motion.div>
 						</div>
 					</div>
 
-					{/* Infrastructure & DevOps */}
+					{/* Infrastructure & Optimization */}
 					<div>
-						<h3 className="text-xl font-semibold mb-6 text-green-400">Infrastructure & DevOps</h3>
+						<h3 className="text-xl font-semibold mb-6 text-green-400">Cloud Infrastructure & Optimization</h3>
 						<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 							<motion.div
 								initial={{ opacity: 0, scale: 0.95 }}
@@ -54,11 +59,11 @@ export default function TechnicalMetrics() {
 								viewport={{ once: true }}
 								className="bg-gray-800/50 rounded-lg p-6 border border-gray-700"
 							>
-								<h4 className="text-lg font-semibold text-gray-300">Cloud Infrastructure</h4>
+								<h4 className="text-lg font-semibold text-gray-300">Snowflake Efficiency</h4>
 								<ul className="mt-2 space-y-2 text-gray-400">
-									<li>• Reduced AWS costs by 35%</li>
-									<li>• Implemented auto-scaling for 20+ services</li>
-									<li>• Zero-downtime deployments</li>
+									<li>• Query speedup of 35% via clustering & view tuning</li>
+									<li>• Reduced warehouse costs by 20%</li>
+									<li>• Enabled secure cross-org data sharing</li>
 								</ul>
 							</motion.div>
 							<motion.div
@@ -67,19 +72,19 @@ export default function TechnicalMetrics() {
 								viewport={{ once: true }}
 								className="bg-gray-800/50 rounded-lg p-6 border border-gray-700"
 							>
-								<h4 className="text-lg font-semibold text-gray-300">CI/CD Pipeline</h4>
+								<h4 className="text-lg font-semibold text-gray-300">Workflow Automation</h4>
 								<ul className="mt-2 space-y-2 text-gray-400">
-									<li>• Reduced deployment time by 65%</li>
-									<li>• Automated testing coverage at 90%</li>
-									<li>• Integration tests success rate 99.5%</li>
+									<li>• Orchestrated 10+ DAGs via Airflow for daily ingestion</li>
+									<li>• Reduced manual ops by 80%</li>
+									<li>• Implemented end-to-end data quality checks</li>
 								</ul>
 							</motion.div>
 						</div>
 					</div>
 
-					{/* Development & Leadership */}
+					{/* Productization & Reusability */}
 					<div>
-						<h3 className="text-xl font-semibold mb-6 text-green-400">Development & Leadership</h3>
+						<h3 className="text-xl font-semibold mb-6 text-green-400">Data Products & Platform</h3>
 						<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 							<motion.div
 								initial={{ opacity: 0, scale: 0.95 }}
@@ -87,11 +92,11 @@ export default function TechnicalMetrics() {
 								viewport={{ once: true }}
 								className="bg-gray-800/50 rounded-lg p-6 border border-gray-700"
 							>
-								<h4 className="text-lg font-semibold text-gray-300">Code Quality</h4>
+								<h4 className="text-lg font-semibold text-gray-300">Reusable Data Products</h4>
 								<ul className="mt-2 space-y-2 text-gray-400">
-									<li>• Led adoption of TypeScript across backend</li>
-									<li>• Established coding standards</li>
-									<li>• Reduced technical debt by 40%</li>
+									<li>• Developed templatized ingestion framework for 5 teams</li>
+									<li>• Cut onboarding time from 2 weeks to 2 days</li>
+									<li>• Included logging, retries, validation as standard</li>
 								</ul>
 							</motion.div>
 							<motion.div
@@ -100,11 +105,11 @@ export default function TechnicalMetrics() {
 								viewport={{ once: true }}
 								className="bg-gray-800/50 rounded-lg p-6 border border-gray-700"
 							>
-								<h4 className="text-lg font-semibold text-gray-300">Team Impact</h4>
+								<h4 className="text-lg font-semibold text-gray-300">Stakeholder Enablement</h4>
 								<ul className="mt-2 space-y-2 text-gray-400">
-									<li>• Mentored 4 junior developers</li>
-									<li>• Created 30+ technical documentation guides</li>
-									<li>• Led 3 major system migrations</li>
+									<li>• Provided 30+ curated metrics via BI tools</li>
+									<li>• Enabled secure access for 5+ external partners</li>
+									<li>• Built self-serve analytics layer using dbt & Snowflake</li>
 								</ul>
 							</motion.div>
 						</div>
